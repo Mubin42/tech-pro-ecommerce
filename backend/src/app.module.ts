@@ -1,6 +1,7 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { MongooseModule } from '@nestjs/mongoose';
+import { StoreModule } from './store/store.module';
 
 // test commit
 @Module({
@@ -12,6 +13,7 @@ import { MongooseModule } from '@nestjs/mongoose';
     }),
     // Importing mongoDB module
     MongooseModule.forRoot(process.env.MONGO_DB_URI),
+    StoreModule,
   ],
   controllers: [],
   providers: [],
