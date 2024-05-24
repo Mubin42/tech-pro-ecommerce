@@ -3,27 +3,25 @@ import React, { FC } from 'react';
 type NavbarProps = {};
 
 const Navbar: FC<NavbarProps> = ({}) => {
-	// api
+  // api
 
-	// hooks
+  // hooks
 
-	// states
+  // states
 
-	// variables
+  // variables
 
-	// styles
+  // styles
 
-	// functions
+  // functions
 
-	// effects
+  // effects
 
-	// components
+  // components
 
-	return (
-		<div className=' bg-blue-500 w-full h-16 flex items-center justify-center text-white font-bold text-xl'>
-			Navbar
-		</div>
-	);
+  return (
+    <div className='w-full h-16 flex items-center justify-center'>Navbar</div>
+  );
 };
 
 export default Navbar;

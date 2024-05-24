@@ -1,25 +1,25 @@
-import React, { FC } from 'react';
+import React, { FC } from "react";
 
 type FooterProps = {};
 
 const Footer: FC<FooterProps> = ({}) => {
-	// api
+  // api
 
-	// hooks
+  // hooks
 
-	// states
+  // states
 
-	// variables
+  // variables
 
-	// styles
+  // styles
 
-	// functions
+  // functions
 
-	// effects
+  // effects
 
-	// components
+  // components
 
-	return <div className=' bg-red-500 w-full h-16'>Footer</div>;
+  return <div className=" bg-red-500 w-full h-16">Footer</div>;
 };
 
 export default Footer;

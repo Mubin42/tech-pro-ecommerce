@@ -5,16 +5,17 @@ import { Label } from '@/components/ui/label';
 import Link from 'next/link';
 import React, { FC } from 'react';
 
-type LoginProps = {};
+type RegisterPageProps = {};
 
-const Login: FC<LoginProps> = ({}) => {
+const RegisterPage: FC<RegisterPageProps> = ({}) => {
   // api
 
   // hooks
 
   // states
-  const [password, setPassword] = React.useState('');
+  const [name, setName] = React.useState('');
   const [email, setEmail] = React.useState('');
+  const [password, setPassword] = React.useState('');
 
   // variables
 
@@ -24,6 +25,7 @@ const Login: FC<LoginProps> = ({}) => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log({
+      name,
       email,
       password,
     });
@@ -37,17 +39,24 @@ const Login: FC<LoginProps> = ({}) => {
     <form onSubmit={handleSubmit}>
       <div className='mx-auto grid w-[350px] gap-6'>
         <div className='grid gap-2 text-center'>
-          <h1 className='text-3xl font-bold'>Login</h1>
+          <h1 className='text-3xl font-bold'>Register</h1>
           <p className='text-balance text-muted-foreground'>
-            Enter your email below to login to your account
+            Enter your credentials below to create an account
           </p>
         </div>
         <div className='grid gap-4'>
           <div className='grid gap-2'>
+            <Label htmlFor='name'>Name</Label>
+            <Input
+              placeholder='John Doe'
+              required
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
+          </div>
+          <div className='grid gap-2'>
             <Label htmlFor='email'>Email</Label>
             <Input
-              id='email'
-              type='email'
               placeholder='m@example.com'
               required
               value={email}
@@ -55,15 +64,7 @@ const Login: FC<LoginProps> = ({}) => {
             />
           </div>
           <div className='grid gap-2'>
-            <div className='flex items-center'>
-              <Label htmlFor='password'>Password</Label>
-              <Link
-                href='/forgot-password'
-                className='ml-auto inline-block text-sm underline'
-              >
-                Forgot your password?
-              </Link>
-            </div>
+            <Label htmlFor='password'>Password</Label>
             <Input
               id='password'
               type='password'
@@ -73,13 +74,13 @@ const Login: FC<LoginProps> = ({}) => {
             />
           </div>
           <Button type='submit' className='w-full'>
-            Login
+            Register
           </Button>
         </div>
         <div className='mt-4 text-center text-sm'>
-          Don&apos;t have an account?
-          <Link href='/auth/register' className='underline'>
-            Sign up
+          Already have an account?{' '}
+          <Link href='/auth/login' className='underline'>
+            Sign In
           </Link>
         </div>
       </div>
@@ -87,4 +88,4 @@ const Login: FC<LoginProps> = ({}) => {
   );
 };
 
-export default Login;
+export default RegisterPage;
