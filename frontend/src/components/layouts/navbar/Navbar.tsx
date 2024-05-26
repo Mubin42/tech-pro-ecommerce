@@ -83,7 +83,7 @@ const Navbar: FC<NavbarProps> = ({}) => {
   );
 
   return (
-    <div className='w-full'>
+    <div className='w-full fixed top-0 bg-white'>
       <div className='p-2 w-full flex items-center justify-between max-w-[1440px] mx-auto'>
         {leftSection}
         {navButtons}
