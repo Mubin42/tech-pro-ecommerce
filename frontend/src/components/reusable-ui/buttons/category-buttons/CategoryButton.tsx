@@ -1,10 +1,15 @@
 import { Button } from '@/components/ui/button';
 import { Mail } from 'lucide-react';
+import Link from 'next/link';
 import React, { FC } from 'react';
 
-type CategoryButtonProps = {};
+type CategoryButtonProps = {
+  href: string;
+  label: string;
+  icon: React.ReactNode;
+};
 
-const CategoryButton: FC<CategoryButtonProps> = ({}) => {
+const CategoryButton: FC<CategoryButtonProps> = ({ href, label, icon }) => {
   // api
 
   // hooks
@@ -22,9 +27,11 @@ const CategoryButton: FC<CategoryButtonProps> = ({}) => {
   // components
 
   return (
-    <Button variant='link' className='text-zinc-300 hover:no-underline'>
-      <Mail className='mr-2 h-4 w-4' /> Category
-    </Button>
+    <Link href={href}>
+      <Button variant='link' className='text-zinc-300 hover:no-underline'>
+        {icon} {label}
+      </Button>
+    </Link>
   );
 };
 
