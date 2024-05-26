@@ -27,7 +27,7 @@ const Navbar: FC<NavbarProps> = ({}) => {
   // components
   const leftSection = (
     <div className='flex w-full gap-4 max-w-lg'>
-      <TechProLogo/>
+      <TechProLogo />
       <div className='flex w-full items-center space-x-2'>
         <Input className='bg-slate-100' placeholder='Search products...' />
         <Button type='submit' size='icon'>
