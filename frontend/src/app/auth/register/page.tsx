@@ -68,6 +68,7 @@ const RegisterPage: FC<RegisterPageProps> = ({}) => {
             <Input
               id='password'
               type='password'
+              placeholder='********'
               required
               value={password}
               onChange={(e) => setPassword(e.target.value)}
