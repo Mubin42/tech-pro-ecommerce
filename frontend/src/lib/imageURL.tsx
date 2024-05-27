@@ -1,4 +1,4 @@
 export const imageURL = {
   authCover: '/auth/smartphones.jpg',
-  hero: '/hero/hero.png',
+  hero: '/hero/iphone-hero.svg',
 };

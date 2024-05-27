@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { imageURL } from '@/lib/imageURL';
+import { MonitorSmartphone, ShoppingCart } from 'lucide-react';
 import React, { FC } from 'react';
 
 type HeroProps = {};
@@ -34,24 +35,29 @@ const Hero: FC<HeroProps> = ({}) => {
         suitable for all types of customers. If you are a tech enthusiast, you
         will love our products.
       </p>
-      <div>
-        <Button>Shop Now</Button>
-        <Button>View Categories</Button>
+      <div className='flex justify-center lg:justify-start gap-2'>
+        <Button>
+          <ShoppingCart className='h-4 w-4 mr-2' />
+          Shop Now
+        </Button>
+        <Button variant='outline'>
+          <MonitorSmartphone className='h-4 w-4 mr-2' /> View Categories
+        </Button>
       </div>
     </div>
   );
 
   const right = (
-    <div className=''>
+    <div className='hidden lg:block'>
       <img
-        src='https://www.tailwind-kit.com/images/object/10.png'
-        className='max-w-48 lg:max-w-sm m-auto'
+        src={imageURL.hero}
+        className='h-48 lg:h-auto max-w-48 lg:max-w-xs m-auto'
       />
     </div>
   );
 
   return (
-    <div className='bg-slate-300 h-screen flex'>
+    <div className='bg-slate-300 h-screen flex mt-10'>
       <div className='grid grid-cols-1 lg:grid-cols-2 max-w-[1440px] p-4 mx-auto flex-1 items-center'>
         {left}
         {right}
