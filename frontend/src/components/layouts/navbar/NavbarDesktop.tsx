@@ -84,7 +84,7 @@ const NavbarDesktop: FC<NavbarDesktopProps> = ({}) => {
   );
 
   return (
-    <div className='w-full hidden md:block fixed top-0 bg-white'>
+    <div className='w-full hidden md:block fixed top-0 bg-white z-50'>
       <div className='p-2 w-full flex items-center justify-between max-w-[1440px] mx-auto'>
         {leftSection}
         {navButtons}

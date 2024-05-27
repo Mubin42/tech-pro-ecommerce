@@ -22,7 +22,7 @@ const NavbarMobile: FC<NavbarMobileProps> = ({}) => {
   // components
 
   return (
-    <div className='w-full flex md:hidden justify-between fixed top-0 bg-white px-4 py-2'>
+    <div className='w-full flex md:hidden justify-between fixed top-0 bg-white px-4 py-2 z-50'>
       <TechProLogo />
       <SidebarDrawer />
     </div>
