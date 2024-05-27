@@ -24,9 +24,9 @@ const Footer: FC<FooterProps> = ({}) => {
 
   // components
   const leftSection = (
-    <div className='w-full space-y-8'>
+    <div className='w-full gap-8 flex flex-col items-center lg:items-start'>
       <TechProLogo inverted />
-      <p className='text-zinc-200'>
+      <p className='text-zinc-200 px-3 text-center lg:px-0 lg:text-left'>
         {`We are a residential interior design firm located in Portland. Our
         boutique-studio offers more than just design, we offer a partnership`}
       </p>
@@ -42,7 +42,7 @@ const Footer: FC<FooterProps> = ({}) => {
   );
 
   const iconSection = (
-    <div className=''>
+    <div className='flex justify-center lg:justify-start'>
       {footerIcons.map((icon, index) => (
         <Link key={index} href={icon.href} target='_blank'>
           <Button
@@ -59,9 +59,9 @@ const Footer: FC<FooterProps> = ({}) => {
   );
 
   return (
-    <div className='w-full bg-zinc-900 py-32'>
-      <div className='p-2 w-full grid-cols-1 max-w-[1440px] mx-auto'>
-        <div className='grid grid-cols-1 lg:grid-cols-3'>
+    <div className='w-full bg-zinc-900 py-16 lg:py-32'>
+      <div className='p-2 w-full grid grid-cols-1 max-w-[1440px] mx-auto gap-6'>
+        <div className='grid grid-cols-1 lg:grid-cols-3 gap-6'>
           {leftSection}
           {middleSection}
           {rightSection}
