@@ -1,4 +1,7 @@
+'use client';
 import React, { FC } from 'react';
+import NavbarDesktop from './NavbarDesktop';
+import NavbarMobile from './NavbarMobile';
 
 type NavbarProps = {};
 
@@ -20,7 +23,11 @@ const Navbar: FC<NavbarProps> = ({}) => {
   // components
 
   return (
-    <div className='w-full h-16 flex items-center justify-center'>Navbar</div>
+    <>
+      {/* NavbarDesktop and NavbarMobile components are rendered conditionally based on the screen size */}
+      <NavbarDesktop />
+      <NavbarMobile />
+    </>
   );
 };
 
